@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+}
+#description,h1{text-align:center;}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin: 0;
+  background-color: dodgerblue
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 5px;
+}
+
+.container {
+  width: 100%;
+  margin: 3.125rem auto 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+form {
+  background: var(--color-darkblue-alpha);
+  padding: 10px 10px;
+  border-radius: 5px;
+  
+}
+
+@media (min-width: 480px) {
+  form {
+    padding: 5px;
+  }
+}
+.form-class {
+  margin: 20px;
+  padding: 0.25rem;
+}
+.input-textarea {
+  min-height: 100px;
+  width: 80%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+.form-control{
+  width:70%;
+  padding:7px;
+  
+}
+.submit-button {
+  display: block;
+  width: 50%;
+  padding: 10px;
+  margin:20px 20px 20px 20%;
+  background: purple;
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+}	
+	</style>
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <h1 id="title">free codecamp survey form</h1>
+    <p id="description">you can obtain your survey form on freecodecamp web page</p>
+    </hader>
+  <form id="survey-form">
+    <div class="form-class">    
+      <label id="name-label" for="name">Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="form-control"
+        placeholder="Enter your name"
+        required
+      />
+    </div>
+    <div class="form-class">    
+      <label id="email-label" for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="form-control"
+        placeholder="Enter your email"
+        required
+      />
+    </div>
+    <div class="form-class">
+      <label id="number-label" for="number">Age(optional)</label>
+   <input
+        type="number"
+        name="age"
+        id="number"
+        min="18"
+        max="50"
+        class="form-control"
+        placeholder="Age"
+      />      
+    </div>
+    <div class="form-class">
+      <p>what is your current occupation?</p>
+      <select id="dropdown" name="occupation" class="form-control" required>
+        <option disabled selected value>Select your current occupation</option>
+        <option value="student">Student</option>
+        <option value="job">Full Time Job</option>
+        <option value="artisan">Artisan</option>
+        <option value="trader">Trader</option>
+        <option value="other">Other please specify</option>
+      </select>
+    </div>
+    <div class="form-class">
+      <p>Would you like to work outside your country?</p>
+      <label>
+        <input
+          name="place-of-wowrk"
+          value="yes"
+          type="radio"
+          class="radio-button"
+          checked
+        />YES</label
+      >
+      <label>
+        <input
+          name="place-of-wowrk"
+          value="no"
+          type="radio"
+          class="radio-button"
+        />NO</label
+      >
+    </div>
+    <div class="form-class">
+      <p>
+        What areas do you think you are good at?
+        <span class="clue">(Check all that apply)</span>
+      </p>
+
+      <label
+        ><input
+          name="prefer"
+          value="front-end-projects"
+          type="checkbox"
+          class="input-checkbox"
+        />Front-end Projects</label
+      >
+      <label>
+        <input
+          name="prefer"
+          value="back-end-projects"
+          type="checkbox"
+          class="input-checkbox"
+        />Back-end Projects</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="data-visualization"
+          type="checkbox"
+          class="input-checkbox"
+        />Data Visualization</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="challenges"
+          type="checkbox"
+          class="input-checkbox"
+        />Challenges</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="open-source-community"
+          type="checkbox"
+          class="input-checkbox"
+        />Open Source Community</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="gitter-help-rooms"
+          type="checkbox"
+          class="input-checkbox"
+        />Gitter help rooms</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="videos"
+          type="checkbox"
+          class="input-checkbox"
+        />Videos</label>
+
+    <div class="form-group">
+      <p>Your feedback?</p>
+      <textarea
+        id="comments"
+        class="input-textarea"
+        name="comment"
+        placeholder="Enter your feedback here..."
+      ></textarea>
+    </div>
+
+    <div class="form-class">
+      <button type="submit" id="submit" class="submit-button">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+</body>
+</html>
